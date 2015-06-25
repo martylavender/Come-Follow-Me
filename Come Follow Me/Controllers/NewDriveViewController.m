@@ -14,9 +14,13 @@
 #import "MathController.h"
 #import "Location.h"
 
+#import <MapKit/MapKit.h>
+
+#import <QuartzCore/QuartzCore.h>
+
 static NSString * const detailSegueName = @"DriveDetails";
 
-@interface NewDriveViewController () <UIActionSheetDelegate, CLLocationManagerDelegate>
+@interface NewDriveViewController () <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic, strong) Drive *drive;
 
@@ -36,6 +40,8 @@ static NSString * const detailSegueName = @"DriveDetails";
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSTimer *timer;
 
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
+
 @end
 
 @implementation NewDriveViewController
@@ -43,6 +49,7 @@ static NSString * const detailSegueName = @"DriveDetails";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	self.mapView.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -56,7 +63,12 @@ static NSString * const detailSegueName = @"DriveDetails";
 	self.timeLabel.hidden = YES;
 	self.distLabel.hidden = YES;
 	self.paceLabel.hidden = YES;
-	self.stopButton.hidden = YES;
+	self.stopButton.hidden = NO;
+	self.stopButton.enabled = NO;
+	
+	self.mapView.hidden = NO;
+	
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,7 +104,8 @@ static NSString * const detailSegueName = @"DriveDetails";
  
 	// Movement threshold for new events.
 	self.locationManager.distanceFilter = 10; // meters
- 
+	
+	[self.locationManager requestWhenInUseAuthorization];
 	[self.locationManager startUpdatingLocation];
 }
 
@@ -106,6 +119,22 @@ static NSString * const detailSegueName = @"DriveDetails";
 }
 */
 
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+	if ([overlay isKindOfClass:[MKPolyline class]]) {
+		MKPolyline *polyLine = (MKPolyline *)overlay;
+		MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+		polylineRenderer.strokeColor = [UIColor blueColor];
+		polylineRenderer.fillColor = [UIColor blueColor];
+		polylineRenderer.lineWidth = 5.0;
+		
+		//[mapView addOverlay:polyLine level:MKOverlayLevelAboveRoads];
+		
+		return polylineRenderer;
+	}
+	return nil;
+}
+
 -(IBAction)startPressed:(id)sender
 {
 	// hide the start UI
@@ -116,7 +145,7 @@ static NSString * const detailSegueName = @"DriveDetails";
 	self.timeLabel.hidden = NO;
 	self.distLabel.hidden = NO;
 	self.paceLabel.hidden = NO;
-	self.stopButton.hidden = NO;
+	self.stopButton.hidden = YES;
 	
 	self.seconds = 0;
 	self.distance = 0;
@@ -124,17 +153,35 @@ static NSString * const detailSegueName = @"DriveDetails";
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
 												selector:@selector(eachSecond) userInfo:nil repeats:YES];
 	[self startLocationUpdates];
+	self.mapView.hidden = NO;
+	[_mapView setShowsUserLocation:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
 {
 	for (CLLocation *newLocation in locations) {
-		if (newLocation.horizontalAccuracy < 20) {
+		
+		NSDate *eventDate = newLocation.timestamp;
+		
+		NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+		
+		if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
 			
 			// update distance
 			if (self.locations.count > 0) {
 				self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+				
+				CLLocationCoordinate2D coords[2];
+				coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;
+				coords[1] = newLocation.coordinate;
+				
+				MKCoordinateRegion region =
+				MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+				[self.mapView setRegion:region animated:YES];
+				
+				[self.mapView addOverlay:[MKPolyline polylineWithCoordinates:coords count:2]];
+				//[self.mapView addOverlay:self.mapView level:MKOverlayLevelAboveRoads];
 			}
 			
 			[self.locations addObject:newLocation];
@@ -180,6 +227,7 @@ static NSString * const detailSegueName = @"DriveDetails";
 													otherButtonTitles:@"Keep This Drive", @"Get Rid Of It", nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	[actionSheet showInView:self.view];
+
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -188,7 +236,7 @@ static NSString * const detailSegueName = @"DriveDetails";
  
 	// save
 	if (buttonIndex == 0) {
-		[self saveDrive]; ///< ADD THIS LINE
+		[self saveDrive];
 		[self performSegueWithIdentifier:detailSegueName sender:nil];
 		
 		// discard

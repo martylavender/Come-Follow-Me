@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4C0930FE1B3C75670073FD48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0930FD1B3C75670073FD48 /* main.m */; };
 		4C0931011B3C75670073FD48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931001B3C75670073FD48 /* AppDelegate.m */; };
-		4C0931041B3C75670073FD48 /* Come_Follow_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931021B3C75670073FD48 /* Come_Follow_Me.xcdatamodeld */; };
 		4C09310A1B3C75670073FD48 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931091B3C75670073FD48 /* DetailViewController.m */; };
 		4C09310D1B3C75670073FD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C09310B1B3C75670073FD48 /* Main.storyboard */; };
 		4C09310F1B3C75670073FD48 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C09310E1B3C75670073FD48 /* Images.xcassets */; };
@@ -21,8 +20,7 @@
 		4C0931311B3C80580073FD48 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931301B3C80580073FD48 /* MathController.m */; };
 		4C0931361B3C984D0073FD48 /* Drive.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931331B3C984D0073FD48 /* Drive.m */; };
 		4C0931371B3C984D0073FD48 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931351B3C984D0073FD48 /* Location.m */; };
-		4C09313C1B3CA0640073FD48 /* Come Follow Me.app in Resources */ = {isa = PBXBuildFile; fileRef = 4C0930F81B3C75670073FD48 /* Come Follow Me.app */; };
-		4C09313D1B3CA0690073FD48 /* Come Follow MeTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 4C0931171B3C75670073FD48 /* Come Follow MeTests.xctest */; };
+		4C0931401B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C09313E1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +39,6 @@
 		4C0930FD1B3C75670073FD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C0930FF1B3C75670073FD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Controllers/AppDelegate.h; sourceTree = "<group>"; };
 		4C0931001B3C75670073FD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Controllers/AppDelegate.m; sourceTree = "<group>"; };
-		4C0931031B3C75670073FD48 /* Come_Follow_Me.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Come_Follow_Me.xcdatamodel; sourceTree = "<group>"; };
 		4C0931081B3C75670073FD48 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controllers/DetailViewController.h; sourceTree = "<group>"; };
 		4C0931091B3C75670073FD48 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
 		4C09310C1B3C75670073FD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +58,7 @@
 		4C0931331B3C984D0073FD48 /* Drive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drive.m; path = Model/Drive.m; sourceTree = "<group>"; };
 		4C0931341B3C984D0073FD48 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Model/Location.h; sourceTree = "<group>"; };
 		4C0931351B3C984D0073FD48 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Model/Location.m; sourceTree = "<group>"; };
+		4C09313F1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Come_Follow_Me.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +145,9 @@
 				4C0931331B3C984D0073FD48 /* Drive.m */,
 				4C0931341B3C984D0073FD48 /* Location.h */,
 				4C0931351B3C984D0073FD48 /* Location.m */,
-				4C0931021B3C75670073FD48 /* Come_Follow_Me.xcdatamodeld */,
 				4C09312F1B3C80580073FD48 /* MathController.h */,
 				4C0931301B3C80580073FD48 /* MathController.m */,
+				4C09313E1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -264,7 +262,6 @@
 			files = (
 				4C09310D1B3C75670073FD48 /* Main.storyboard in Resources */,
 				4C0931121B3C75670073FD48 /* LaunchScreen.xib in Resources */,
-				4C09313C1B3CA0640073FD48 /* Come Follow Me.app in Resources */,
 				4C09310F1B3C75670073FD48 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C09313D1B3CA0690073FD48 /* Come Follow MeTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +282,12 @@
 			files = (
 				4C09310A1B3C75670073FD48 /* DetailViewController.m in Sources */,
 				4C0931011B3C75670073FD48 /* AppDelegate.m in Sources */,
+				4C0931401B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodeld in Sources */,
 				4C09312E1B3C7CC60073FD48 /* NewDriveViewController.m in Sources */,
 				4C0930FE1B3C75670073FD48 /* main.m in Sources */,
 				4C0931371B3C984D0073FD48 /* Location.m in Sources */,
 				4C0931361B3C984D0073FD48 /* Drive.m in Sources */,
 				4C09312B1B3C7C630073FD48 /* HomeViewController.m in Sources */,
-				4C0931041B3C75670073FD48 /* Come_Follow_Me.xcdatamodeld in Sources */,
 				4C0931311B3C80580073FD48 /* MathController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,13 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4C0931021B3C75670073FD48 /* Come_Follow_Me.xcdatamodeld */ = {
+		4C09313E1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4C0931031B3C75670073FD48 /* Come_Follow_Me.xcdatamodel */,
+				4C09313F1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodel */,
 			);
-			currentVersion = 4C0931031B3C75670073FD48 /* Come_Follow_Me.xcdatamodel */;
-			path = Come_Follow_Me.xcdatamodeld;
+			currentVersion = 4C09313F1B3CA0DD0073FD48 /* Come_Follow_Me.xcdatamodel */;
+			name = Come_Follow_Me.xcdatamodeld;
+			path = Model/Come_Follow_Me.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

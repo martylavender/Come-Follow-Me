@@ -55,6 +55,8 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	[self configureView];
+	
+	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,10 +102,13 @@
 {
 	if ([overlay isKindOfClass:[MKPolyline class]]) {
 		MKPolyline *polyLine = (MKPolyline *)overlay;
-		MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-		aRenderer.strokeColor = [UIColor blackColor];
-		aRenderer.lineWidth = 3;
-		return aRenderer;
+		MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+		polylineRenderer.strokeColor = [UIColor blueColor];
+		polylineRenderer.fillColor = [UIColor blueColor];
+		polylineRenderer.lineWidth = 5.0;
+		//[mapView addOverlay:overlay level:MKOverlayLevelAboveRoads];
+		
+		return polylineRenderer;
 	}
  
 	return nil;
