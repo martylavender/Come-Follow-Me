@@ -21,6 +21,8 @@
 		4C0931311B3C80580073FD48 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931301B3C80580073FD48 /* MathController.m */; };
 		4C0931361B3C984D0073FD48 /* Drive.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931331B3C984D0073FD48 /* Drive.m */; };
 		4C0931371B3C984D0073FD48 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0931351B3C984D0073FD48 /* Location.m */; };
+		4C09313C1B3CA0640073FD48 /* Come Follow Me.app in Resources */ = {isa = PBXBuildFile; fileRef = 4C0930F81B3C75670073FD48 /* Come Follow Me.app */; };
+		4C09313D1B3CA0690073FD48 /* Come Follow MeTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 4C0931171B3C75670073FD48 /* Come Follow MeTests.xctest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +39,11 @@
 		4C0930F81B3C75670073FD48 /* Come Follow Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Come Follow Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0930FC1B3C75670073FD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0930FD1B3C75670073FD48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C0930FF1B3C75670073FD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4C0931001B3C75670073FD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C0930FF1B3C75670073FD48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Controllers/AppDelegate.h; sourceTree = "<group>"; };
+		4C0931001B3C75670073FD48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Controllers/AppDelegate.m; sourceTree = "<group>"; };
 		4C0931031B3C75670073FD48 /* Come_Follow_Me.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Come_Follow_Me.xcdatamodel; sourceTree = "<group>"; };
-		4C0931081B3C75670073FD48 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		4C0931091B3C75670073FD48 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4C0931081B3C75670073FD48 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controllers/DetailViewController.h; sourceTree = "<group>"; };
+		4C0931091B3C75670073FD48 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
 		4C09310C1B3C75670073FD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C09310E1B3C75670073FD48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C0931111B3C75670073FD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -49,16 +51,16 @@
 		4C09311C1B3C75670073FD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C09311D1B3C75670073FD48 /* Come_Follow_MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Come_Follow_MeTests.m; sourceTree = "<group>"; };
 		4C0931271B3C76300073FD48 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4C0931291B3C7C630073FD48 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		4C09312A1B3C7C630073FD48 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		4C09312C1B3C7CC60073FD48 /* NewDriveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDriveViewController.h; sourceTree = "<group>"; };
-		4C09312D1B3C7CC60073FD48 /* NewDriveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDriveViewController.m; sourceTree = "<group>"; };
-		4C09312F1B3C80580073FD48 /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathController.h; path = ../MathController.h; sourceTree = "<group>"; };
-		4C0931301B3C80580073FD48 /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathController.m; path = ../MathController.m; sourceTree = "<group>"; };
-		4C0931321B3C984D0073FD48 /* Drive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drive.h; sourceTree = "<group>"; };
-		4C0931331B3C984D0073FD48 /* Drive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drive.m; sourceTree = "<group>"; };
-		4C0931341B3C984D0073FD48 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		4C0931351B3C984D0073FD48 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		4C0931291B3C7C630073FD48 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Controllers/HomeViewController.h; sourceTree = "<group>"; };
+		4C09312A1B3C7C630073FD48 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controllers/HomeViewController.m; sourceTree = "<group>"; };
+		4C09312C1B3C7CC60073FD48 /* NewDriveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewDriveViewController.h; path = Controllers/NewDriveViewController.h; sourceTree = "<group>"; };
+		4C09312D1B3C7CC60073FD48 /* NewDriveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewDriveViewController.m; path = Controllers/NewDriveViewController.m; sourceTree = "<group>"; };
+		4C09312F1B3C80580073FD48 /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathController.h; path = Model/MathController.h; sourceTree = "<group>"; };
+		4C0931301B3C80580073FD48 /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathController.m; path = Model/MathController.m; sourceTree = "<group>"; };
+		4C0931321B3C984D0073FD48 /* Drive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drive.h; path = Model/Drive.h; sourceTree = "<group>"; };
+		4C0931331B3C984D0073FD48 /* Drive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drive.m; path = Model/Drive.m; sourceTree = "<group>"; };
+		4C0931341B3C984D0073FD48 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Model/Location.h; sourceTree = "<group>"; };
+		4C0931351B3C984D0073FD48 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Model/Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			files = (
 				4C09310D1B3C75670073FD48 /* Main.storyboard in Resources */,
 				4C0931121B3C75670073FD48 /* LaunchScreen.xib in Resources */,
+				4C09313C1B3CA0640073FD48 /* Come Follow Me.app in Resources */,
 				4C09310F1B3C75670073FD48 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C09313D1B3CA0690073FD48 /* Come Follow MeTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +321,7 @@
 				4C09310C1B3C75670073FD48 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4C0931101B3C75670073FD48 /* LaunchScreen.xib */ = {
@@ -325,6 +330,7 @@
 				4C0931111B3C75670073FD48 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -483,6 +489,7 @@
 				4C0931231B3C75670073FD48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C0931241B3C75670073FD48 /* Build configuration list for PBXNativeTarget "Come Follow MeTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +498,7 @@
 				4C0931261B3C75670073FD48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
