@@ -18,6 +18,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+
+
 static NSString * const detailSegueName = @"DriveDetails";
 
 @interface NewDriveViewController () <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
@@ -42,9 +44,12 @@ static NSString * const detailSegueName = @"DriveDetails";
 
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
+
 @end
 
 @implementation NewDriveViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -146,6 +151,8 @@ static NSString * const detailSegueName = @"DriveDetails";
 	self.distLabel.hidden = NO;
 	self.paceLabel.hidden = NO;
 	self.stopButton.hidden = YES;
+	
+
 	
 	self.seconds = 0;
 	self.distance = 0;
